@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asfad — Web Developer & Excel Expert</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container { width: 90%; max-width: 1200px; margin: auto; }
+    .nav {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      padding: 1rem 0;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      animation: fadeIn 1s ease-in;
+    }
+    .brand { font-size: 1.8rem; font-weight: 700; }
+    .navlinks a {
+      margin-left: 2rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .navlinks a:hover { color: #ffd700; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 4rem 0;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      animation: slideUp 1s ease-in-out;
+    }
+    .hero-text h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+    .cta .btn {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+    .btn { background: #2c5364; color: #fff; }
+    .btn-light {
+      background: #fff;
+      color: #2c5364;
+      border: 2px solid #2c5364;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: #2c5364;
+      border: 2px dashed #2c5364;
+    }
+    .btn:hover { transform: scale(1.05); }
+
+    .hero-img img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      animation: fadeIn 2s ease-in;
+    }
+
+    .section { padding: 4rem 0; }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .skill {
+      background: #2c5364;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 500;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-card img { width: 100%; height: auto; }
+    .proj-info { padding: 1rem; }
+    .proj-btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #2c5364;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .contact-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+    .contact-form button {
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: #2c5364;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer {
+      background: #2c5364;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="container">
+      <div class="brand">Asfad</div>
+      <nav class="navlinks">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>I'm Asfad</h1>
+        <h2>Web Developer & Excel Expert</h2>
+        <p>Crafting clean, responsive websites and smart Excel solutions — dashboards, automation and reports that save time and look professional.</p>
+        <div class="cta">
+          <a class="btn" href="https://wa.me/923232157513" target="_blank">WhatsApp</a>
+          <a class="btn btn-light" href="mailto:asfadmubarakali4@gmail.com">Email</a>
+          <a class="btn btn-ghost" href="https://instagram.com/" target="_blank">Instagram</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="img.01.jpg" alt="Asfad Profile" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section container">
+    <h3>About Me</h3>
+    <p>I am a front-end focused Web Developer and Excel specialist. I build responsive websites using HTML, CSS and JavaScript, and create Excel automations, dashboards and data visualizations that help businesses and individuals work smarter.</p>
+    <div class="skills">
+      <div class="skill">HTML & CSS</div>
+      <div class="skill">JavaScript (Vanilla)</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">Excel Automation & Macros</div>
+      <div class="skill">Data Visualization</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section container">
+    <h3>Selected Projects</h3>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="img 2.png" alt="Project 1">
+        <div class="proj-info">
+          <h4>Responsive Landing Page</h4>
+          <p>Clean layout, modern hero and mobile-first design.</p>
+          <a class="proj-btn" href="#">View Demo</a>
+        </div>
+      </div>
+      <div class
